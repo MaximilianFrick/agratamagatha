@@ -99,7 +99,7 @@ public class TimeTableFragment extends Fragment implements OnAlarmSetListener {
       builder.setDefaults(DEFAULT_ALL);
       builder.setAutoCancel(true);
       builder.setContentIntent(PendingIntent.getActivity(getActivity(), 0,
-            new Intent(getActivity(), TopLevelActivity.class), PendingIntent.FLAG_UPDATE_CURRENT));
+            new Intent(getActivity(), TopLevelActivity.class), PendingIntent.FLAG_ONE_SHOT));
       builder.setSmallIcon(R.drawable.ic_lineup);
       return builder.build();
    }
@@ -127,12 +127,11 @@ public class TimeTableFragment extends Fragment implements OnAlarmSetListener {
    }
 
    private void scheduleNotification(Notification notification, int delay) {
-
       Intent notificationIntent = new Intent(getActivity(), NotificationPublisher.class);
-      notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+      notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, (int)System.currentTimeMillis());
       notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
-      PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), 0, notificationIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT);
+      PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), (int)System.currentTimeMillis(), notificationIntent,
+            PendingIntent.FLAG_ONE_SHOT);
       long futureInMillis = SystemClock.elapsedRealtime() + delay;
       AlarmManager alarmManager =
             (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
