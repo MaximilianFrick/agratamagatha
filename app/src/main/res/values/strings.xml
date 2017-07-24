@@ -1,0 +1,10 @@
+<resources>
+   <string name="app_name">agratamagatha</string>
+   <string name="title_start">Start</string>
+   <string name="title_lineup">Lineup</string>
+   <string name="title_tickets">Tickets</string>
+   <string name="title_good_to_know">Wissenswertes</string>
+   <string name="icon_go_to_band">icon go to band</string>
+   <string name="title_timetable">Zeitplan</string>
+   <string name="more_bands">ALLE BANDS</string>
+</resources>

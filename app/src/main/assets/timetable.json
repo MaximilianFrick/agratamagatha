@@ -1,0 +1,252 @@
+[
+  {
+    "day": "FREITAG, 28.Juli 2017",
+    "locations": [
+      {
+        "name": "Seebühne",
+        "gigs": [
+          {
+            "time": "16:00 - 16:45",
+            "band": "K-City Cris & Ibrahim Lässing",
+            "timestamp": 1501250400,
+            "notify": false
+          },
+          {
+            "time": "17:15 - 18:00",
+            "band": "Jordan Price",
+            "timestamp": 1501254900,
+            "notify": false
+          },
+          {
+            "time": "18:30 - 19:30",
+            "band": "Die Sauna",
+            "timestamp": 1501259400,
+            "notify": false
+          },
+          {
+            "time": "20:00 - 21:00",
+            "band": "The Whiskey Foundation",
+            "timestamp": 1501264800,
+            "notify": false
+          },
+          {
+            "time": "21:30 - 22:30",
+            "band": "Lady Chann",
+            "timestamp": 1501270200,
+            "notify": false
+          },
+          {
+            "time": "23:00 - 00:00",
+            "band": "MEUTE",
+            "timestamp": 1501275600,
+            "notify": false
+          },
+          {
+            "time": "00:30 - 02:00",
+            "band": "COW",
+            "timestamp": 1501194600,
+            "notify": false
+          }
+        ]
+      },
+      {
+        "name": "Zirkuszelt",
+        "gigs": [
+          {
+            "time": "17:00 - 18:30",
+            "band": "ModeKontrol",
+            "timestamp": 1501254000,
+            "notify": false
+          },
+          {
+            "time": "18:30 - 20:00",
+            "band": "Umberto Echo",
+            "timestamp": 1501259400,
+            "notify": false
+          },
+          {
+            "time": "20:00 - 21:30",
+            "band": "MoPLasique & Sascha Koch",
+            "timestamp": 1501264800,
+            "notify": false
+          },
+          {
+            "time": "21:30 - 23:00",
+            "band": "AnalogBassCamp",
+            "timestamp": 1501270200,
+            "notify": false
+          },
+          {
+            "time": "23:00 - 01:00",
+            "band": "Sepalot mit Drummer Fab",
+            "timestamp": 1501275600,
+            "notify": false
+          },
+          {
+            "time": "01:00 - 02:00",
+            "band": "Austrian Apparel",
+            "timestamp": 1501282800,
+            "notify": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "SAMSTAG, 29.Juli 2017",
+    "locations": [
+      {
+        "name": "Seebühne",
+        "gigs": [
+          {
+            "time": "12:00 - 12:30",
+            "band": "!!!Überraschung!!!",
+            "timestamp": 1501322400,
+            "notify": false
+          },
+          {
+            "time": "13:00 - 14:00",
+            "band": "Shanti Powa",
+            "timestamp": 1501326000,
+            "notify": false
+          },
+          {
+            "time": "14:30 - 15:30",
+            "band": "Bird Berlin",
+            "timestamp": 1501331400,
+            "notify": false
+          },
+          {
+            "time": "16:00 - 17:00",
+            "band": "One Time Zik",
+            "timestamp": 1501336800,
+            "notify": false
+          },
+          {
+            "time": "17:30 - 18:30",
+            "band": "Sparkling",
+            "timestamp": 1501342200,
+            "notify": false
+          },
+          {
+            "time": "19:00 - 20:00",
+            "band": "Plastic Surgery Disaster",
+            "timestamp": 1501347600,
+            "notify": false
+          },
+          {
+            "time": "20:30 - 21:30",
+            "band": "Tribes of Jizu feat. Die Kraszesten & Galv of the 3 Moonz",
+            "timestamp": 1501353000,
+            "notify": false
+          },
+          {
+            "time": "22:00 - 23:00",
+            "band": "Isolation Berlin",
+            "timestamp": 1501358400,
+            "notify": false
+          },
+          {
+            "time": "23:30 - 00:30",
+            "band": "Gudrun von Laxenburg",
+            "timestamp": 1501363800,
+            "notify": false
+          },
+          {
+            "time": "01:00 - 02:00",
+            "band": "Dorian Concept",
+            "timestamp": 1501369200,
+            "notify": false
+          }
+        ]
+      },
+      {
+        "name": "Zirkuszelt",
+        "gigs": [
+          {
+            "time": "10:00 - 13:30",
+            "band": "Workshops",
+            "timestamp": 1501315200,
+            "notify": false
+          },
+          {
+            "time": "13:30 - 15:00",
+            "band": "AgratAmAgatha DJ Crew",
+            "timestamp": 1501327800,
+            "notify": false
+          },
+          {
+            "time": "15:00 - 16:30",
+            "band": "DJ ThumbzUp",
+            "timestamp": 1501333200,
+            "notify": false
+          },
+          {
+            "time": "16:30 - 18:00",
+            "band": "Ramirez",
+            "timestamp": 1501338600,
+            "notify": false
+          },
+          {
+            "time": "18:00 - 19:30",
+            "band": "Plagu & Bosstölpel",
+            "timestamp": 1501344000,
+            "notify": false
+          },
+          {
+            "time": "19:30 - 21:00",
+            "band": "Bogaloo DJs",
+            "timestamp": 1501349400,
+            "notify": false
+          },
+          {
+            "time": "21:00 - 22:30",
+            "band": "Top Shotta",
+            "timestamp": 1501354800,
+            "notify": false
+          },
+          {
+            "time": "22:30 - 00:00",
+            "band": "Danny Scrilla",
+            "timestamp": 1501360200,
+            "notify": false
+          },
+          {
+            "time": "00:00 - 02:00",
+            "band": "Sarah Farina b2b Uta",
+            "timestamp": 1501365600,
+            "notify": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "Sonntag, 30.Juli 2017",
+    "locations": [
+      {
+        "name": "Seebühne",
+        "gigs": [
+          {
+            "time": "10:00 - 12:00",
+            "band": "Kapella Rustica",
+            "timestamp": 1501401600,
+            "notify": false
+          },
+          {
+            "time": "12:15 - 13:30",
+            "band": "Gamskampler",
+            "timestamp": 1501410600,
+            "notify": false
+          },
+          {
+            "time": "13:15 - 14:45",
+            "band": "Strabande",
+            "timestamp": 1501414200,
+            "notify": false
+          }
+        ]
+      }
+    ]
+  }
+]

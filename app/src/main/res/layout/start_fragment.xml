@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:fitsSystemWindows="false">
+
+   <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+         <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/background" />
+
+         <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_inverted" />
+
+      </LinearLayout>
+
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:padding="16dp">
+
+         <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:src="@drawable/logo" />
+
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="28.07 - 30-07."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+         <LinearLayout
+            android:id="@+id/countdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:weightSum="3">
+
+            <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                  android:id="@+id/countdown_days"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/white"
+                  android:textSize="60sp"
+                  android:textStyle="italic"
+                  tools:text="52" />
+
+               <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="DAYS"
+                  android:textColor="@android:color/white"
+                  android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                  android:id="@+id/countdown_hours"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/white"
+                  android:textSize="60sp"
+                  android:textStyle="italic"
+                  tools:text="10" />
+
+               <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="HOURS"
+                  android:textColor="@android:color/white"
+                  android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="end"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                  android:id="@+id/countdown_minutes"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/white"
+                  android:textSize="60sp"
+                  android:textStyle="italic"
+                  tools:text="43" />
+
+               <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="MINUTES"
+                  android:textColor="@android:color/white"
+                  android:textSize="20sp" />
+
+            </LinearLayout>
+         </LinearLayout>
+
+         <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
+
+            <ImageView
+               android:id="@+id/headliner_1"
+               android:src="@drawable/headliner_small_1" />
+
+            <ImageView
+               android:id="@+id/headliner_2"
+               android:src="@drawable/headliner_small_2" />
+
+            <ImageView
+               android:id="@+id/headliner_3"
+               android:src="@drawable/headliner_small_3" />
+
+            <ImageView
+               android:id="@+id/headliner_4"
+               android:src="@drawable/headliner_small_4" />
+
+            <ImageView
+               android:id="@+id/headliner_5"
+               android:src="@drawable/headliner_small_5" />
+
+            <ImageView
+               android:id="@+id/headliner_6"
+               android:src="@drawable/headliner_small_6" />
+         </GridLayout>
+
+         <TextView
+            android:id="@+id/btn_more_bands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/more_bands"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+      </LinearLayout>
+   </FrameLayout>
+
+</ScrollView>
