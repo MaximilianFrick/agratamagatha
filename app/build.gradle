@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'realm-android'
 
 android {
    compileSdkVersion 25
@@ -37,7 +36,4 @@ dependencies {
    compile 'com.android.support:support-vector-drawable:25.4.0'
    compile 'com.google.code.gson:gson:2.8.1'
    compile 'com.android.support:customtabs:25.4.0'
-   compile 'com.airbnb.android:epoxy:2.2.0'
-   // Add the annotation processor if you are using Epoxy's annotations (recommended)
-   annotationProcessor 'com.airbnb.android:epoxy-processor:2.2.0'
 }
