@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.webkit.WebView;
 
-import com.frick.maximilian.agratamagatha.BaseActivity;
+import com.frick.maximilian.agratamagatha.core.BaseActivity;
 import com.frick.maximilian.agratamagatha.R;
 
 public class BandWebViewActivity extends BaseActivity {

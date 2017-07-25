@@ -7,10 +7,7 @@
    <item android:id="@+id/navigation_lineup" android:icon="@drawable/ic_lineup"
       android:title="@string/title_lineup" />
 
-   <item android:id="@+id/navigation_timetable" android:icon="@drawable/ic_schedule"
+   <item android:id="@+id/navigation_timetable" android:icon="@drawable/ic_timetable"
       android:title="@string/title_timetable" />
-
-   <item android:id="@+id/navigation_good_to_know" android:icon="@drawable/ic_know"
-      android:title="@string/title_good_to_know" />
 
 </menu>

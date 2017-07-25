@@ -1,4 +1,4 @@
-package com.frick.maximilian.agratamagatha;
+package com.frick.maximilian.agratamagatha.core;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;

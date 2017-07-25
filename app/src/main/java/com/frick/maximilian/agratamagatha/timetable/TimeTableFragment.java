@@ -5,8 +5,10 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -128,10 +130,12 @@ public class TimeTableFragment extends Fragment implements OnAlarmSetListener {
 
    private void scheduleNotification(Notification notification, int delay) {
       Intent notificationIntent = new Intent(getActivity(), NotificationPublisher.class);
-      notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, (int)System.currentTimeMillis());
+      notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID,
+            (int) System.currentTimeMillis());
       notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
-      PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), (int)System.currentTimeMillis(), notificationIntent,
-            PendingIntent.FLAG_ONE_SHOT);
+      PendingIntent pendingIntent =
+            PendingIntent.getBroadcast(getActivity(), (int) System.currentTimeMillis(),
+                  notificationIntent, PendingIntent.FLAG_ONE_SHOT);
       long futureInMillis = SystemClock.elapsedRealtime() + delay;
       AlarmManager alarmManager =
             (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);

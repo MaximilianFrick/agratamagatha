@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
+import com.frick.maximilian.agratamagatha.core.BaseActivity;
 import com.frick.maximilian.agratamagatha.lineup.LineUpFragment;
 import com.frick.maximilian.agratamagatha.timetable.TimeTableFragment;
 
@@ -35,9 +36,6 @@ public class TopLevelActivity extends BaseActivity
             break;
          case R.id.navigation_timetable:
             selectedFragment = TimeTableFragment.newInstance();
-            break;
-         case R.id.navigation_good_to_know:
-            selectedFragment = GoodToKnowFragment.newInstance();
             break;
       }
       FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
