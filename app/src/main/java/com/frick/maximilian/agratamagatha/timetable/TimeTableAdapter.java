@@ -19,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.ViewHolder> {
+class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.ViewHolder> {
    public class DayViewHolder extends ViewHolder {
       @BindView (R.id.day_name)
       TextView day;
@@ -51,15 +51,18 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.View
       @Override
       void updateView(int position) {
          final Gig gig = ((Gig) items.get(position));
-         final boolean isSelected = gig.isNotify();
          time.setText(gig.getTime());
          band.setText(gig.getBand());
-         alarm.setSelected(isSelected);
+         alarm.setSelected(gig.isNotify());
          alarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               alarm.setSelected(!isSelected);
-               alarmClickListener.onAlarmClicked(gig, alarm.isSelected());
+               if (alarm.isSelected()) {
+                  alarmClickListener.alarmAlreadySet();
+               } else {
+                  alarm.setSelected(true);
+                  alarmClickListener.onAlarmClicked(gig);
+               }
             }
          });
       }

@@ -16,9 +16,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.frick.maximilian.agratamagatha.ImpressumActivity;
 import com.frick.maximilian.agratamagatha.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -58,6 +62,17 @@ public class LineUpFragment extends Fragment implements BandClickedListener {
       intent.launchUrl(getActivity(), Uri.parse(band.getLink()));
    }
 
+   @Override
+   public void onCreate(@Nullable Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setHasOptionsMenu(true);
+   }
+
+   @Override
+   public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+      inflater.inflate(R.menu.impressum, menu);
+   }
+
    @Nullable
    @Override
    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -66,6 +81,14 @@ public class LineUpFragment extends Fragment implements BandClickedListener {
       ButterKnife.bind(this, view);
       initToolbar();
       return view;
+   }
+
+   @Override
+   public boolean onOptionsItemSelected(MenuItem item) {
+      if (item.getItemId() == R.id.action_impressum) {
+         startActivity(new Intent(getActivity(), ImpressumActivity.class));
+      }
+      return true;
    }
 
    @Override
@@ -112,11 +135,13 @@ public class LineUpFragment extends Fragment implements BandClickedListener {
       builder.addDefaultShareMenuItem();
       Intent menuIntent = new Intent();
       menuIntent.setClass(getActivity().getApplicationContext(), this.getClass());
-      Bundle menuBundle = ActivityOptions.makeCustomAnimation(getActivity(), android.R.anim.slide_in_left,
-            android.R.anim.slide_out_right)
-            .toBundle();
+      Bundle menuBundle =
+            ActivityOptions.makeCustomAnimation(getActivity(), android.R.anim.slide_in_left,
+                  android.R.anim.slide_out_right)
+                  .toBundle();
       PendingIntent pendingIntent =
-            PendingIntent.getActivity(getActivity().getApplicationContext(), 0, menuIntent, 0, menuBundle);
+            PendingIntent.getActivity(getActivity().getApplicationContext(), 0, menuIntent, 0,
+                  menuBundle);
       builder.addMenuItem("trololo", pendingIntent);
    }
 
