@@ -142,7 +142,6 @@ public class LineUpFragment extends Fragment implements BandClickedListener {
       PendingIntent pendingIntent =
             PendingIntent.getActivity(getActivity().getApplicationContext(), 0, menuIntent, 0,
                   menuBundle);
-      builder.addMenuItem("trololo", pendingIntent);
    }
 
    private void prepareToolbar(CustomTabsIntent.Builder builder) {
