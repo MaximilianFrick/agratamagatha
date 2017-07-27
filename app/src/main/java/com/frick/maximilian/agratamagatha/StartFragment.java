@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class StartFragment extends Fragment {
+   public static final long END_DATE = 1501452000000L;
    @BindView (R.id.countdown)
    LinearLayout countDownView;
    @BindView (R.id.countdown_days)
@@ -69,10 +70,14 @@ public class StartFragment extends Fragment {
    @Override
    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
       super.onViewCreated(view, savedInstanceState);
+      handleCountdown();
+   }
+
+   private void handleCountdown() {
       Calendar dateOfFestival = Calendar.getInstance();
-      dateOfFestival.setTimeInMillis(1501102800000L);
+      dateOfFestival.setTimeInMillis(1501192800000L);
       Calendar now = Calendar.getInstance();
-      long difference = dateOfFestival.getTimeInMillis() - now.getTimeInMillis();
+      long difference = dateOfFestival.getTimeInMillis() - System.currentTimeMillis();
       timeLeft = Calendar.getInstance();
       new CountDownTimer(difference, 5000) {
 
@@ -80,16 +85,32 @@ public class StartFragment extends Fragment {
          public void onFinish() {
             countDownView.setVisibility(View.GONE);
             liveView.setVisibility(View.VISIBLE);
+            checkIfFestivalIsOver();
          }
 
          @Override
          public void onTick(long millisUntilFinished) {
             timeLeft.setTimeInMillis(millisUntilFinished);
-            days.setText(String.valueOf(timeLeft.get(Calendar.DAY_OF_MONTH)));
-            hours.setText(String.valueOf(timeLeft.get(Calendar.HOUR_OF_DAY)));
-            minutes.setText(String.valueOf(timeLeft.get(Calendar.MINUTE)));
+            long diff = millisUntilFinished / 1000;
+            int secss = (int) (diff % 60);
+            diff = diff / 60;
+
+            int minss = (int) (diff % 60);
+            diff = diff / 60;
+
+            int hourss = (int) (diff % 24);
+            int dayss = (int) (diff / 24);
+            days.setText(String.valueOf(dayss));
+            hours.setText(String.valueOf(hourss));
+            minutes.setText(String.valueOf(minss));
          }
       }.start();
+   }
+
+   private void checkIfFestivalIsOver() {
+      if (System.currentTimeMillis() > END_DATE) {
+         liveView.setText("VORBEI");
+      }
    }
 
    @OnClick (R.id.headliner_5)
